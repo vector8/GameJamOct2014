@@ -1,0 +1,7 @@
+syntax: glob
+GameJam/GameJam/Debug/*
+GameJam/Debug/GameJam.exe
+GameJam/Debug/GameJam.pdb
+GameJam/Debug/GameJam.ilk
+GameJam/GameJam.sdf
+GameJam/GameJam.v12.suo
