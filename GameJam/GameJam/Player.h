@@ -1,16 +1,6 @@
 #pragma once
 #include <SFML\Graphics.hpp>
 
-const int IDLE_FRAME_DURATION = 300;
-const int RUN_FRAME_DURATION = 100;
-const int JUMP_DURATION = 500;
-const int FRAME_MAX = 4;
-const float MOVE_SPEED = 0.2f;
-const float JUMP_SPEED = 0.5f;
-const float SCALE_SMALL = 2.f;
-const float SCALE_LARGE = 6.f;
-const float MUTATE_SPEED = 0.002f;
-
 enum class PlayerAnimations
 {
 	IDLE,
@@ -21,6 +11,16 @@ enum class PlayerAnimations
 class Player
 {
 private:
+	const int IDLE_FRAME_DURATION = 300;
+	const int RUN_FRAME_DURATION = 100;
+	const int JUMP_DURATION = 500;
+	const int FRAME_MAX = 4;
+	const float MOVE_SPEED = 0.2f;
+	const float JUMP_SPEED = 0.5f;
+	const float SCALE_SMALL = 2.f;
+	const float SCALE_LARGE = 6.f;
+	const float MUTATE_SPEED = 0.002f;
+
 	sf::Sprite* sprite;
 	sf::Time frameTimer;
 	sf::Time jumpTimer;
