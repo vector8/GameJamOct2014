@@ -12,6 +12,10 @@ namespace v8g
 	
 	sf::Vector2f normalize(const sf::Vector2f &v);
 
+	float length(const sf::Vector2f &v);
+	
+	float lengthSquared(const sf::Vector2f &v);
+
 	template <class T>
 	T lerp(float u, const T &p0, const T &p1)
 	{
@@ -35,4 +39,8 @@ namespace v8g
 
 	int stringToInt(std::string s);
 	std::string intToString(int i);
+
+	int rollNumber(int lowerBound, int upperBound);
+
+	float rollNumber(float lowerBound, float upperBound, int precision);
 }

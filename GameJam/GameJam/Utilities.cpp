@@ -14,6 +14,16 @@ namespace v8g
 		else
 			return (v / sqrtf(v.x * v.x + v.y * v.y));
 	}
+	
+	float length(const sf::Vector2f &v)
+	{
+		return sqrtf(v.x * v.x + v.y * v.y);
+	}
+
+	float lengthSquared(const sf::Vector2f &v)
+	{
+		return v.x * v.x + v.y * v.y;
+	}
 
 	std::string ltrim(std::string s)
 	{
@@ -112,5 +122,38 @@ namespace v8g
 		ss << i;
 
 		return ss.str();
+	}
+
+	int rollNumber(int lowerBound, int upperBound)
+	{
+		static bool first = true;
+
+		if (first)
+		{
+			srand((unsigned)time(NULL));
+			first = false;
+		}
+
+		return rand() % (upperBound - lowerBound) + lowerBound;
+	}
+
+	float rollNumber(float lowerBound, float upperBound, int precision)
+	{
+		static bool first = true;
+
+		if (first)
+		{
+			srand((unsigned)time(NULL));
+			first = false;
+		}
+
+		int power = pow(10, precision);
+
+		int lowerInt = lowerBound * power;
+		int upperInt = upperBound * power;
+
+		int random = rand() % (upperInt - lowerInt) + lowerInt;
+
+		return (float)random / (float)power;
 	}
 }

@@ -14,6 +14,7 @@
 #include "Sundial.h"
 #include "Utilities.h"
 #include "DayNightMessage.h"
+#include "Enemy.h"
 
 int main()
 {
@@ -24,6 +25,7 @@ int main()
 	Player p;
 	Sundial s;
 	DayNightMessage m;
+	Enemy bob(10, 10);
 
 	sf::Clock clock;
 	sf::Time elapsed(sf::Time::Zero);
@@ -70,6 +72,7 @@ int main()
 
 		p.update(elapsed);
 		s.update(elapsed);
+		bob.update(elapsed, p.getSprite()->getPosition(), s.isDayTime());
 		m.update(elapsed);
 
 		float time = s.getTime().asSeconds() - DAY_LENGTH/4;
@@ -84,6 +87,7 @@ int main()
 		sf::Uint8 blue = (sf::Uint8)(v8g::lerp(time, 0.f, 0.3f) * 255.f);
 		window.clear(sf::Color(0, green, blue));
 		window.draw(*p.getSprite());
+		window.draw(*bob.getSprite());
 		window.draw(*s.getDialSprite());
 		window.draw(*s.getFrameSprite());
 		window.draw(m.getMessage());
