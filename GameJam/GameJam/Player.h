@@ -42,4 +42,6 @@ public:
 
 	void jump();
 	void mutate();
+
+	void reset();
 };
