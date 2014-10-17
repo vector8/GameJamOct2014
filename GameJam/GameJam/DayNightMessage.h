@@ -32,4 +32,6 @@ public:
 	void nextNight();
 
 	void update(const sf::Time &dt);
+
+	void reset();
 };

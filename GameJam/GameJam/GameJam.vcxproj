@@ -67,18 +67,24 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Carrot.cpp" />
     <ClCompile Include="DayNightMessage.cpp" />
     <ClCompile Include="Enemy.cpp" />
+    <ClCompile Include="Game.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Player.cpp" />
+    <ClCompile Include="Spear.cpp" />
     <ClCompile Include="Sundial.cpp" />
     <ClCompile Include="Utilities.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Carrot.h" />
     <ClInclude Include="DayNightMessage.h" />
     <ClInclude Include="Enemy.h" />
+    <ClInclude Include="Game.h" />
     <ClInclude Include="Globals.h" />
     <ClInclude Include="Player.h" />
+    <ClInclude Include="Spear.h" />
     <ClInclude Include="Sundial.h" />
     <ClInclude Include="Utilities.h" />
   </ItemGroup>

@@ -23,4 +23,6 @@ public:
 	bool isDayTime() const;
 
 	void update(const sf::Time &dt);
+
+	void reset();
 };

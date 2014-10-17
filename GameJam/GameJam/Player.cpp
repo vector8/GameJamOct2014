@@ -153,3 +153,16 @@ void Player::mutate()
 		targetScale = (xScale / abs(xScale)) * SCALE_SMALL;
 		//this->sprite->setScale((xScale / abs(xScale)) * SCALE_SMALL, SCALE_SMALL);
 }
+
+void Player::reset()
+{
+	this->setAnimation(PlayerAnimations::IDLE);
+	this->sprite->setPosition(WINDOW_WIDTH / 2, WINDOW_HEIGHT / 2);
+	this->mutating = false;
+	this->prevScale = SCALE_SMALL;
+	this->targetScale = SCALE_SMALL;
+	this->scaleInterpolation = 0.f;
+	this->sprite->setScale(SCALE_SMALL, SCALE_SMALL);
+	this->jumpTimer = sf::Time::Zero;
+	this->currentVelocity = sf::Vector2f(0.f, 0.f);
+}

@@ -100,3 +100,12 @@ void DayNightMessage::update(const sf::Time &dt)
 	sf::FloatRect msgRect = message->getLocalBounds();
 	message->setOrigin(msgRect.width / 2, msgRect.height / 2);
 }
+
+void DayNightMessage::reset()
+{
+	day = 1;
+	daytime = true;
+	alphaInterpolation = 0.f;
+	currentState = MessageState::FADE_IN;
+	displayTimer = sf::Time::Zero;
+}
